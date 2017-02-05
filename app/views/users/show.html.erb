@@ -33,7 +33,10 @@
 	<% @user.memberships.each do |m| %>
 		<%= link_to m.beer_club.name, m.beer_club %>
 		| 
-		<%= m.beer_club.year %>
+		<%= m.beer_club.year %> 
+		|
+		<%= link_to 'delete', m, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<br>
 	<% end %>
 </p>
 
